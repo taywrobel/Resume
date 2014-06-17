@@ -1,4 +1,4 @@
-%% start of file twrobel-resume.tex
+%% start of file `twrobel-resume.tex`
 
 %
 % Based on the template file from the moderncv LaTeX package (copyright statement below)
@@ -22,12 +22,12 @@
 \usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
 
 % adjust the page margins
-\usepackage[scale=0.85]{geometry}
+\usepackage[scale=0.875]{geometry}
 %\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
 %\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
 % personal data
-\name{Taylor}{Wrobel (WIP)}
+\name{Taylor}{Wrobel}
 \address{545 San Antonio Rd.}{\# 206}{Mountain View, CA 94040}
 \phone[mobile]{(860)~906~8151}
 \email{taylor.wrobel@gmail.com}
@@ -35,59 +35,72 @@
 \social[github]{twrobel3}
 
 %----------------------------------------------------------------------------------
-%            content
+%  resume content
 %----------------------------------------------------------------------------------
 \begin{document}
 
-%-----       resume       ---------------------------------------------------------
 \makecvtitle
 
 \section{Education}
 \cventry{2009--2013}{Bachelor of Science in Computer Science}{Georgia Institute of Technology}{Atlanta, GA}{\textit{Major GPA: 3.36/4.0}}{}
 
 \section{Experience}
-\cventry{May 2013--Present}{Simulation Software Engineer}{Palantir Technologies}{Palo Alto, CA}{}{Engineer on the Simulation Software Engineering team (SSE), which focuses on automation to solve issues of continuous code delivery and reliability.\newline{}%
-Detailed achievements:%
-\begin{itemize}%
-\item Achievement 1;
-\item Achievement 2;
-\item Achievement 3.
-\end{itemize}}
-\cventry{May 2012--May 2013}{Simulation Software Engineering Intern}{Palantir Technologies}{Palo Alto, CA}{}{Description}
+
+\cventry{May 2013--Present}{Simulation Software Engineer}{Palantir Technologies}{Palo Alto, CA}{}{}
+\begin{itemize}
+\item Worked with members of the SSE team to address issues of continuous code delivery and code quality in an automated fashion
+\item Lead development on "PipeDream", a software system to monitor and assess data integrity and completeness in the field
+\item Maintained and improved the Java client based front-end automation regression tests and infrastructure
+\end{itemize}
+
+\cventry{May 2012--May 2013}{Simulation Software Engineering Intern}{Palantir Technologies}{Palo Alto, CA}{}{}
+\begin{itemize}
+\item Created an internal tool to oversee and manage a cluster of VM's used for testing
+\item Improved core testing infrastructure and efficiency through modifications made to 
+testing architecture and implementation
+\end{itemize}
+
 \cventry{May 2011--July 2011}{Information Technology Intern}{Union Pacific Railroad}{Omaha, NE}{}{}
+\begin{itemize}
+\item Designed a full computer system for quickly and efficiently processing raw data recorded automatically from wayside devices
+\item Worked with others within the company to analyze the business and technical needs of the application
+\end{itemize}
 
-\section{Languages}
-\cvitemwithcomment{Language 1}{Skill level}{Comment}
-\cvitemwithcomment{Language 2}{Skill level}{Comment}
-\cvitemwithcomment{Language 3}{Skill level}{Comment}
+\section{Programming Languages}
 
-\section{Computer skills}
-\cvdoubleitem{category 1}{XXX, YYY, ZZZ}{category 4}{XXX, YYY, ZZZ}
-\cvdoubleitem{category 2}{XXX, YYY, ZZZ}{category 5}{XXX, YYY, ZZZ}
-\cvdoubleitem{category 3}{XXX, YYY, ZZZ}{category 6}{XXX, YYY, ZZZ}
-
-\section{Interests}
-\cvitem{hobby 1}{Description}
-\cvitem{hobby 2}{Description}
-\cvitem{hobby 3}{Description}
-
-\section{Extra 1}
-\cvlistitem{Item 1}
-\cvlistitem{Item 2}
-\cvlistitem{Item 3. This item is particularly long and therefore normally spans over several lines. Did you notice the indentation when the line wraps?}
-
-\section{Extra 2}
-\cvlistdoubleitem{Item 1}{Item 4}
-\cvlistdoubleitem{Item 2}{Item 5\cite{book1}}
-\cvlistdoubleitem{Item 3}{Item 6. Like item 3 in the single column list before, this item is particularly long to wrap over several lines.}
-
-\section{References}
 \begin{cvcolumns}
-  \cvcolumn{Category 1}{\begin{itemize}\item Person 1\item Person 2\item Person 3\end{itemize}}
-  \cvcolumn{Category 2}{Amongst others:\begin{itemize}\item Person 1, and\item Person 2\end{itemize}(more upon request)}
-  \cvcolumn[0.5]{All the rest \& some more}{\textit{That} person, and \textbf{those} also (all available upon request).}
+\cvcolumn{Working Knowledge}{
+	\begin{itemize}
+	\item Java
+	\item Groovy
+	\item Shell scripting
+	\item Python
+	\item LaTeX
+	\end{itemize}
+}
+\cvcolumn{Basic Knowledge}{
+	\begin{itemize}
+	\item HTML/CSS
+	\item Javascript
+	\item SQL
+	\item C/C++
+	\item Batch scripting/Powershell
+	\end{itemize}
+}
 \end{cvcolumns}
+
+\section{Skills}
+
+\cvdoubleitem{Design}{Photoshop, Illustrator, GIMP, InkScape}{MS Office}{Word, Powerpoint, Outlook}
+\cvdoubleitem{IDEs}{Eclipse, IntelliJ, TeXworks}{Editors}{Vim, Notepad++, Atom}
+\cvdoubleitem{Algorithms}{Graph Theory, Sorting, Data Processing}{Data Structures}{Trees, Graphs, HashTables}
+\cvitem{Operating Systems}{Microsoft Windows, Mac OSX, Ubuntu, Android}
+
+\section{Awards}
+
+\cvlistitem{2010 College of Computing Rising Star Award}
+\cvlistitem{2011 College of Computing Sophomore of the year}
 
 \end{document}
 
-%% end of file `template.tex'.
+%% end of file `twrobel-resume.tex'.
