@@ -1,3 +1,7 @@
+# Rendered Resume
+twrobel-resume.pdf
+
+# LaTeX support files
 *.aux
 *.glo
 *.idx
