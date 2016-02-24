@@ -2,12 +2,10 @@ language: java # Using java so the gradle environment is correct
 
 before_install:
   - sudo apt-get -qq update
+  - sudo apt-get install -qy texlive-full
 
-install:
-	- sudo apt-get install -qy texlive-full
+install: /bin/true
 
-script:
-	- ./gradlew build
+script: gradlew build
 
-after_script:
-	- ./gradlew clean
+after_script: gradlew clean
