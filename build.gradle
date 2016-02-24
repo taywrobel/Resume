@@ -1,0 +1,62 @@
+/*
+ * Usage:
+ *    all LaTeX source files go in $rawDirectory
+ *    base document to 'cook'  should match content of $latexFile
+ *    build script delivers resulting PDF file to $cookedDirectory
+*/
+
+defaultTasks 'full'
+
+ext { documentBase = 'twrobel-resume' }
+
+project.ext {
+  latexFile = documentBase + '.tex'
+  pdfFile = documentBase + '.pdf'
+  srcDir = 'src'
+  distDir = 'dist'
+}
+
+task build(type: Exec) {
+  doFirst {
+    println "Cooking $project.latexFile in /$project.srcDir."
+  }
+
+  outputs.upToDateWhen{false}
+  workingDir project.srcDir
+
+  commandLine 'pdflatex', project.documentBase
+
+  outputs.file file("$project.srcDir/$project.pdfFile")
+
+  doLast {
+    println "Built $project.latexFile into $project.pdfFile."
+  }
+}
+
+task publish(type: Copy) {
+  outputs.upToDateWhen{false}
+
+  from build
+  into project.distDir
+
+  doLast {
+    println "Delivered $project.pdfFile to /$project.distDir."
+  }
+}
+
+task clean(type: Delete) {
+  dependsOn publish
+  outputs.upToDateWhen{false}
+
+  delete {
+    fileTree(dir: project.srcDir, excludes: ['**/*.tex', '**/*.cls'])
+  }
+
+  doLast {
+    println "Flushed /$project.srcDir of temporary $documentBase files."
+  }
+}
+
+task full {
+  dependsOn clean
+}

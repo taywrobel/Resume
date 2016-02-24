@@ -1,5 +1,8 @@
-# Rendered Resume
-twrobel-resume.pdf
+# Rendered Resume Directory
+dist/
+
+# Temporary Rendered Resume
+src/twrobel-resume.pdf
 
 # LaTeX support files
 *.aux
@@ -25,3 +28,9 @@ twrobel-resume.pdf
 *.mtc1
 *.out
 *.synctex.gz
+
+# OS X Files
+.DS_Store
+
+# Gradle build directory
+.gradle/
