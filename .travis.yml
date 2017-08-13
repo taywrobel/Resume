@@ -1,11 +1,16 @@
-language: java # Using java so the gradle environment is correct
-
+sudo: required
+dist: trusty
 before_install:
-  - sudo apt-get -qq update
-  - sudo apt-get install -qy texlive-full
-
-install: /bin/true
-
-script: gradlew build
-
-after_script: gradlew clean
+- sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-fonts-recommended
+  texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended
+script:
+- mkdir dist
+- pdflatex -interaction=nonstopmode -halt-on-error -output-directory dist src/twrobel-resume.tex
+deploy:
+  provider: releases
+  api_key:
+    secure: PFH6uhLnQN7caPpjZVlqaoK7GjGWlUbEBghqOFJd2EJxcUvoqZf3yKhTGBPqY5hlyO/WjszluVbCtIygUnEHpgZhxD2Q7tiOh6rb5bcTEwMDRiXPzj2w6UlyuKAC4bt9GRYfbCy7qMkOuL0oBWnkgKiBGmIhYTjAPwmBmjY2/Zw=
+  file: dist/twrobel-resume.pdf
+  skip_cleanup: true
+  on:
+    tags: true
