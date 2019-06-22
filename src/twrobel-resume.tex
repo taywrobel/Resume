@@ -29,9 +29,8 @@
 
 % personal data
 \name{Taylor}{Wrobel}
-\address{550 Moreland Way}{\#4415}{Santa Clara, CA 95054}
-\phone[mobile]{(860)~906~8151}
-\email{taylor.wrobel@gmail.com}
+\address{Playa Vista, CA 90094}
+\email{recruiting@wrobel.dev}
 \social[linkedin]{taylorwrobel}
 \social[github]{twrobel3}
 
@@ -49,26 +48,34 @@
 
 \section{Experience}
 
-\cventry{April 2016--Present}{Software Engineer}{Apple, Inc.}{Cupertino, CA}{}{}
+\cventry{March 2019--Present}{Software Engineering Manager}{Apple, Inc.}{Culver City, CA}{}{}
 \begin{itemize}
-\item Acting as the directly responsible individual (DRI) for a large scale service responsible for the storage, aggregration, and searching and retrevial of various types of test results
-\item Improved system performance 5x for mission-critical operations from time of joining team
-\item Worked to augment tracing, monitoring, and alerting for applications within the team's domain
-\item Designed and implemented new features involving changes to the data model, data access, and infrastucture
+\item Managing the Platform Test Infrastructure team, a small team focused on providing world class internal tooling within the testing domain to developers across Apple
+\item Leading development of multiple systems, including a test result data store, email templating service, and BDD style automation test framework
+\item Meeting with customers to assess needs and feature demand, and structuring product roadmap accordingly
+\item Engaging in cross functional and company wide initiatives to improve the culture around producing quality software
+\end{itemize}
+
+\cventry{April 2016--March 2019}{Software Engineer}{Apple, Inc.}{Cupertino, CA}{}{}
+\begin{itemize}
+\item Lead development of a large scale service responsible for the storage, aggregration, and visualization of test results
+\item Improved performance of critical path operations by over an order of magnitude through data schema, system architecture, and business logic improvements
+\item Implemented distributed tracing, monitoring, and alerting for applications within the team's domain
+\item Designed a new major version of the API to improve consistency and performance and organized its rollout
 \end{itemize}
 
 \cventry{September 2014--April 2016}{CTO and Lead Engineer}{Aurora Technology, Inc.}{San Francisco, CA}{}{}
 \begin{itemize}
 \item Founding member of a team working to bring non-predatory automated lending to developing countries
-\item Designed and implemented a microservice architecture with focus on scalability, security, and data consistency
+\item Designed and implemented a micro-service architecture with focus on scalability, security, and data consistency
 \item Lead a team of 5 other engineers in writing and deploying a scalable financial services platform
 \item Enforced good coding practices via required code reviews, documentation, and unit and integration testing
 \end{itemize}
 
-\cventry{May 2013--September 2014}{Simulation Software Engineer}{Palantir Technologies}{Palo Alto, CA}{}{}
+\cventry{May 2013--September 2014}{Simulation Software Engineering}{Palantir Technologies}{Palo Alto, CA}{}{}
 \begin{itemize}
 \item Worked with members of the SSE team to address issues of continuous code delivery and code quality via automation
-\item Lead development on "PipeDream", a system to monitor and assess data integrity and completeness in the field
+\item Lead development on an automated system to validate integrity and completeness of production data
 \item Maintained and improved the front-end automation regression tests and infrastructure for the Java client
 \end{itemize}
 
@@ -78,8 +85,30 @@
 \item Improved core testing infrastructure and efficiency through modifications made to architecture and implementation
 \end{itemize}
 
+\section{Highlighted Projects}
+
+\cventry{}{Apple, Inc.}{Test Result Store}{Cupertino, CA}{}{}
+\begin{itemize}
+\item Tech stack included Node.js at the application layer, Cassandra for primary data storage, Redis for caching and eventing, and Blob storage for large file storage
+\item Scaled service up to ~200M assertions ingested per week (250x increase from the time I joined)
+\item Supported both traditional unit and integration tests, as well as synthetic monitoring test results
+\item Integrated with a mix of OSS and proprietary systems for logging, tracing, app-to-app communication, and authentication
+\end{itemize}
+
+\section{Highlighted Projects (cont.)}
+
+\cventry{}{Apple, Inc.}{Authentication Proxy}{Cupertino, CA}{}{}
+\begin{itemize}
+\item Go HTTP reverse proxy to transparently handle user authentication against Apple's internal authentication system
+\item Individually authored during nights and weekends, and voluntarily submitted for information security review
+\item HMAC signing of user data with mechanisms to mitigate MITM and replay attacks
+\item Feature rich, including multi-tier caching, rate limiting, tracing, multimodal auth support, logout mechanisms, etc.
+\item 4th most starred repository on the internal Github Enterprise instance (2nd most starred application, most starred individually authored)
+\item Actively used by various production and non-production use cases across the company
+\end{itemize}
+
 \section{Education}
-\cventry{2009--2013}{Bachelor of Science in Computer Science}{Georgia Institute of Technology}{Atlanta, GA}{\textit{Major GPA: 3.36/4.0}}{}
+\cventry{2009--2013}{Bachelor of Science in Computer Science}{Georgia Institute of Technology}{Atlanta, GA}{}{}
 
 \section{Programming Languages and Tools}
 \begin{cvcolumns}
@@ -87,13 +116,12 @@
 	\vspace{-8mm}
 	\begin{multicols}{2}
 	\begin{itemize}
-	\item Javascript (incl. Node.js)
-	\item Java
+	\item Node.js
 	\item Go
 	\item Git
 	\columnbreak
-	\item Python
-	\item Groovy
+	\item Java
+	\item OpenSSL
 	\item SQL
 	\end{itemize}
 	\end{multicols}
@@ -103,10 +131,11 @@
 	\begin{multicols}{2}
 	\begin{itemize}
 	\item HTML and CSS
-	\item Bash Scripting
+	\item Bash
 	\item C/C++
+	\item Groovy
+	\item Python
 	\item \LaTeX
-	\item OpenSSL
 	\end{itemize}
 	\end{multicols}
 }
@@ -115,13 +144,12 @@
 \vspace{-5mm}
 \section{Skills}
 
+\cvitem{Distributed Systems Concepts}{Raft, Paxos, CRDTs, CAP/PACELC, 2 Phase Commit}
 \cvitem{Data Structures}{Lists, Trees, Graphs, Hash Tables/Maps, Hash Chains, Heaps, Concurrent Data Structures}
 \cvitem{Algorithms and Paradigms}{Graph Theory, Sorting Algorithms, Concurrency (CSP, Shared Memory, Callbacks)}
-\cvitem{Databases}{SQLite, PostgreSQL, RethinkDB, MongoDB, Redis, CockroachDB}
-\cvitem{Development and Production Platforms}{Phabricator, Jenkins CI, AWS (EC2, ElasticBeanstalk, RDS, SQS)}
-\cvitem{IDEs and Editors}{IntelliJ, Eclipse, TeXworks, Vim, Notepad++, Atom}
-\cvitem{Design Software}{Adobe Photoshop, Adobe Illustrator, GIMP, InkScape}
-\cvitem{Operating Systems}{Apple OS X, Microsoft Windows, Ubuntu, EC2 Linux}
+\cvitem{Data Systems}{Cassandra, CockroachDB, Redis, NATS, PostgreSQL, Apache Kafka, SQLite}
+\cvitem{DevOps Platforms}{Kubernetes, Jenkins CI, AWS (EC2, ElasticBeanstalk, RDS, SQS), Zipkin, Splunk, ELK (ElasticSearch, Logstash, Kibana)}
+\cvitem{Managerial}{Nonviolent Communication, Implicit Bias Awareness, Behavioral Interview Experience, Inclusion \& Diversity}
 
 \end{document}
 
