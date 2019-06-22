@@ -31,6 +31,3 @@ src/twrobel-resume.pdf
 
 # OS X Files
 .DS_Store
-
-# Gradle build directory
-.gradle/
