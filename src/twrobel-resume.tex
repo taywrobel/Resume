@@ -29,10 +29,10 @@
 
 % personal data
 \name{Taylor}{Wrobel}
-\address{Playa Vista, CA 90094}
-\email{recruiting@wrobel.dev}
+\address{Menlo Park, CA 94025}
+\email{taylor.wrobel@gmail.com}
 \social[linkedin]{taylorwrobel}
-\social[github]{twrobel3}
+\social[github]{taywrobel}
 
 %multicol support
 \usepackage{multicol}
@@ -48,12 +48,20 @@
 
 \section{Experience}
 
-\cventry{March 2019--Present}{Software Engineering Manager}{Apple, Inc.}{Culver City, CA}{}{}
+\cventry{September 2019--Present}{Senior Software Engineer}{GitHub, Inc.}{Remote}{}{}
 \begin{itemize}
-\item Managing the Platform Test Infrastructure team, a small team focused on providing world class internal tooling within the testing domain to developers across Apple
-\item Leading development of multiple systems, including a test result data store, email templating service, and BDD style automation test framework
-\item Meeting with customers to assess needs and feature demand, and structuring product roadmap accordingly
-\item Engaging in cross functional and company wide initiatives to improve the culture around producing quality software
+\item Drove re-architecting of the GitHub Packages product and served as technical lead for the GitHub Container Registry
+\item Established a paved path for products to break out of the GitHub ruby monolith and into a microservice architecture
+\item Coordinated cross-functionally with teams on authentication, authorization, infrastructure, and other GitHub features
+\item Lead coordination and debugging of system availability incidents and established high quality observability and alerting
+\end{itemize}
+
+\cventry{March 2019--November 2019}{Software Engineering Manager}{Apple, Inc.}{Culver City, CA}{}{}
+\begin{itemize}
+\item Managed the Platform Test Infrastructure team, a small team focused on providing world class internal tooling within the testing domain to developers across Apple
+\item Lead development of multiple systems, including a test result data store, email templating service, and BDD style automation test framework
+\item Met with customers to assess needs and feature demand, and structuring product roadmap accordingly
+\item Engaged in cross functional and company wide initiatives to improve the culture around producing quality software
 \end{itemize}
 
 \cventry{April 2016--March 2019}{Software Engineer}{Apple, Inc.}{Cupertino, CA}{}{}
@@ -72,7 +80,7 @@
 \item Enforced good coding practices via required code reviews, documentation, and unit and integration testing
 \end{itemize}
 
-\cventry{May 2013--September 2014}{Simulation Software Engineering}{Palantir Technologies}{Palo Alto, CA}{}{}
+\cventry{May 2013--September 2014}{Simulation Software Engineer}{Palantir Technologies}{Palo Alto, CA}{}{}
 \begin{itemize}
 \item Worked with members of the SSE team to address issues of continuous code delivery and code quality via automation
 \item Lead development on an automated system to validate integrity and completeness of production data
@@ -85,7 +93,18 @@
 \item Improved core testing infrastructure and efficiency through modifications made to architecture and implementation
 \end{itemize}
 
+\newpage
+
 \section{Highlighted Projects}
+
+\cventry{}{GitHub, Inc.}{GitHub Container Registry}{Cupertino, CA}{}{}
+\begin{itemize}
+\item OCI compliant container Registry integrated with GitHub, available at ghcr.io
+\item Tech stack consisting of Golang and Ruby on Rails at the application layer, infrastructure consisting of MySQL, Apache Kafka, and Elasticsearch, and Twirp for server-to-server RPC operations
+\item Complete re-design of the GitHub Packages product as a standalone microservice external to the GitHub monolith
+\item 99.99\%+ availability, while meeting strict latency requirements
+\item Integrated seamlessly with GitHub Actions and Codespaces, the GitHub authentication and authorization mechanisms, and internal GitHub infrastructure such as the audit log and search clusters
+\end{itemize}
 
 \cventry{}{Apple, Inc.}{Test Result Store}{Cupertino, CA}{}{}
 \begin{itemize}
@@ -95,15 +114,12 @@
 \item Integrated with a mix of OSS and proprietary systems for logging, tracing, app-to-app communication, and authentication
 \end{itemize}
 
-\section{Highlighted Projects (cont.)}
-
 \cventry{}{Apple, Inc.}{Authentication Proxy}{Cupertino, CA}{}{}
 \begin{itemize}
 \item Go HTTP reverse proxy to transparently handle user authentication against Apple's internal authentication system
 \item Individually authored during nights and weekends, and voluntarily submitted for information security review
 \item HMAC signing of user data with mechanisms to mitigate MITM and replay attacks
-\item Feature rich, including multi-tier caching, rate limiting, tracing, multimodal auth support, logout mechanisms, etc.
-\item 4th most starred repository on the internal Github Enterprise instance (2nd most starred application, most starred individually authored)
+\item Feature rich, including multi-tier caching, rate limiting, tracing, multimodal auth support, and logout mechanisms
 \item Actively used by various production and non-production use cases across the company
 \end{itemize}
 
@@ -147,7 +163,7 @@
 \cvitem{Distributed Systems Concepts}{Raft, Paxos, CRDTs, CAP/PACELC, 2 Phase Commit}
 \cvitem{Data Structures}{Lists, Trees, Graphs, Hash Tables/Maps, Hash Chains, Heaps, Concurrent Data Structures}
 \cvitem{Algorithms and Paradigms}{Graph Theory, Sorting Algorithms, Concurrency (CSP, Shared Memory, Callbacks)}
-\cvitem{Data Systems}{Cassandra, CockroachDB, Redis, NATS, PostgreSQL, Apache Kafka, SQLite}
+\cvitem{Data Systems}{Cassandra, CockroachDB, Redis, NATS, MySQL, PostgreSQL, Apache Kafka}
 \cvitem{DevOps Platforms}{Kubernetes, Jenkins CI, AWS (EC2, ElasticBeanstalk, RDS, SQS), Zipkin, Splunk, ELK (ElasticSearch, Logstash, Kibana)}
 \cvitem{Managerial}{Nonviolent Communication, Implicit Bias Awareness, Behavioral Interview Experience, Inclusion \& Diversity}
 
