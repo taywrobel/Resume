@@ -48,12 +48,13 @@
 
 \section{Experience}
 
-\cventry{September 2019--Present}{Senior Software Engineer}{GitHub, Inc.}{Remote}{}{}
+\cventry{November 2019--Present}{Staff Software Engineer}{GitHub, Inc.}{Remote}{}{}
 \begin{itemize}
-\item Drove re-architecting of the GitHub Packages product and served as technical lead for the GitHub Container Registry
+\item Lead re-architecting of the GitHub Packages product and served as technical lead for the GitHub Container Registry
+\item Implemented data infrastructure integrations within the Go codebase including a data access layer on top of MySQL, a search and indexing client using Elasticsearch, and messaging infrastructure on Apache Kafka
 \item Established a paved path for products to break out of the GitHub ruby monolith and into a microservice architecture
-\item Coordinated cross-functionally with teams on authentication, authorization, infrastructure, and other GitHub features
-\item Lead coordination and debugging of system availability incidents and established high quality observability and alerting
+\item Coordinated cross-functionally with teams on authentication, authorization, infrastructure, and other GitHub features such as Actions and Codespaces
+\item Established high quality monitoring, alerting, and observability implementations
 \end{itemize}
 
 \cventry{March 2019--November 2019}{Software Engineering Manager}{Apple, Inc.}{Culver City, CA}{}{}
@@ -97,7 +98,7 @@
 
 \section{Highlighted Projects}
 
-\cventry{}{GitHub, Inc.}{GitHub Container Registry}{Cupertino, CA}{}{}
+\cventry{}{GitHub, Inc.}{GitHub Container Registry}{}{}{}
 \begin{itemize}
 \item OCI compliant container Registry integrated with GitHub, available at ghcr.io
 \item Tech stack consisting of Golang and Ruby on Rails at the application layer, infrastructure consisting of MySQL, Apache Kafka, and Elasticsearch, and Twirp for server-to-server RPC operations
@@ -106,7 +107,7 @@
 \item Integrated seamlessly with GitHub Actions and Codespaces, the GitHub authentication and authorization mechanisms, and internal GitHub infrastructure such as the audit log and search clusters
 \end{itemize}
 
-\cventry{}{Apple, Inc.}{Test Result Store}{Cupertino, CA}{}{}
+\cventry{}{Apple, Inc.}{Test Result Store}{}{}{}
 \begin{itemize}
 \item Tech stack included Node.js at the application layer, Cassandra for primary data storage, Redis for caching and eventing, and Blob storage for large file storage
 \item Scaled service up to ~200M assertions ingested per week (250x increase from the time I joined)
@@ -114,7 +115,7 @@
 \item Integrated with a mix of OSS and proprietary systems for logging, tracing, app-to-app communication, and authentication
 \end{itemize}
 
-\cventry{}{Apple, Inc.}{Authentication Proxy}{Cupertino, CA}{}{}
+\cventry{}{Apple, Inc.}{Authentication Proxy}{}{}{}
 \begin{itemize}
 \item Go HTTP reverse proxy to transparently handle user authentication against Apple's internal authentication system
 \item Individually authored during nights and weekends, and voluntarily submitted for information security review
@@ -132,13 +133,13 @@
 	\vspace{-8mm}
 	\begin{multicols}{2}
 	\begin{itemize}
-	\item Node.js
 	\item Go
+	\item Node.js
 	\item Git
 	\columnbreak
 	\item Java
-	\item OpenSSL
 	\item SQL
+	\item CQL
 	\end{itemize}
 	\end{multicols}
 }
@@ -149,8 +150,8 @@
 	\item HTML and CSS
 	\item Bash
 	\item C/C++
-	\item Groovy
 	\item Python
+	\item HCL
 	\item \LaTeX
 	\end{itemize}
 	\end{multicols}
@@ -161,10 +162,10 @@
 \section{Skills}
 
 \cvitem{Distributed Systems Concepts}{Raft, Paxos, CRDTs, CAP/PACELC, 2 Phase Commit}
-\cvitem{Data Structures}{Lists, Trees, Graphs, Hash Tables/Maps, Hash Chains, Heaps, Concurrent Data Structures}
-\cvitem{Algorithms and Paradigms}{Graph Theory, Sorting Algorithms, Concurrency (CSP, Shared Memory, Callbacks)}
-\cvitem{Data Systems}{Cassandra, CockroachDB, Redis, NATS, MySQL, PostgreSQL, Apache Kafka}
-\cvitem{DevOps Platforms}{Kubernetes, Jenkins CI, AWS (EC2, ElasticBeanstalk, RDS, SQS), Zipkin, Splunk, ELK (ElasticSearch, Logstash, Kibana)}
+\cvitem{Data Structures}{Lists, Trees, Graphs, Hash Tables/Maps, Hash Chains, Probabilistic Data Structures}
+\cvitem{Algorithms and Paradigms}{Sorting Algorithms, Concurrency (CSP, Shared Memory, Callbacks), Graph Theory}
+\cvitem{Data Systems}{Cassandra, CockroachDB, MySQL, Redis, Elasticsearch, NATS, PostgreSQL, Apache Kafka}
+\cvitem{DevOps Platforms}{Kubernetes, GitHub Actions, Jenkins CI, Microsoft Azure, AWS, Zipkin, Splunk}
 \cvitem{Managerial}{Nonviolent Communication, Implicit Bias Awareness, Behavioral Interview Experience, Inclusion \& Diversity}
 
 \end{document}
